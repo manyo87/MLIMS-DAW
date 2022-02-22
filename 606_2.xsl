@@ -4,23 +4,23 @@
     <xsl:strip-space elements="*" />
 
     <xsl:template match="/">
-        <ciudades>
+        <cities>
             <xsl:apply-templates />
-        </ciudades>
+        </cities>
     </xsl:template>
 
-    <xsl:template match="museo">
-        <ciudad>
-            <xsl:attribute name="nombre">
-                <xsl:value-of select="@ciudad" />
+    <xsl:template match="museum">
+        <city>
+            <xsl:attribute name="name">
+                <xsl:value-of select="@city" />
             </xsl:attribute>
-            <pais>
-                <xsl:value-of select="@pais" />
-            </pais>
-            <museo>
-                <xsl:value-of select="@nombre" />
-            </museo>
-        </ciudad>
+            <country>
+                <xsl:value-of select="@country" />
+            </country>
+            <museum>
+                <xsl:value-of select="@name" />
+            </museum>
+        </city>
     </xsl:template>
 
 </xsl:stylesheet>
